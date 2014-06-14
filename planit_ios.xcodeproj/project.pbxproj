@@ -14,6 +14,8 @@
 		20085F63194B8244000EBB0A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20085F62194B8244000EBB0A /* Images.xcassets */; };
 		20085F6F194B8244000EBB0A /* planit_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20085F6E194B8244000EBB0A /* planit_iosTests.swift */; };
 		20085F79194B827E000EBB0A /* ActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20085F78194B827E000EBB0A /* ActivityManager.swift */; };
+		20267182194CCC7E008B73FC /* UserTripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20267181194CCC7E008B73FC /* UserTripsViewController.swift */; };
+		20C77309194CC6D900CD641E /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C77308194CC6D900CD641E /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		20085F6D194B8244000EBB0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20085F6E194B8244000EBB0A /* planit_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = planit_iosTests.swift; sourceTree = "<group>"; };
 		20085F78194B827E000EBB0A /* ActivityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityManager.swift; sourceTree = "<group>"; };
+		20267181194CCC7E008B73FC /* UserTripsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTripsViewController.swift; sourceTree = "<group>"; };
+		20C77308194CC6D900CD641E /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +85,9 @@
 			children = (
 				20085F59194B8244000EBB0A /* AppDelegate.swift */,
 				20085F5B194B8244000EBB0A /* FirstViewController.swift */,
+				20267181194CCC7E008B73FC /* UserTripsViewController.swift */,
 				20085F5D194B8244000EBB0A /* SecondViewController.swift */,
+				20C77308194CC6D900CD641E /* ThirdViewController.swift */,
 				20085F78194B827E000EBB0A /* ActivityManager.swift */,
 				20085F5F194B8244000EBB0A /* Main.storyboard */,
 				20085F62194B8244000EBB0A /* Images.xcassets */,
@@ -214,8 +220,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20267182194CCC7E008B73FC /* UserTripsViewController.swift in Sources */,
 				20085F79194B827E000EBB0A /* ActivityManager.swift in Sources */,
 				20085F5E194B8244000EBB0A /* SecondViewController.swift in Sources */,
+				20C77309194CC6D900CD641E /* ThirdViewController.swift in Sources */,
 				20085F5A194B8244000EBB0A /* AppDelegate.swift in Sources */,
 				20085F5C194B8244000EBB0A /* FirstViewController.swift in Sources */,
 			);
@@ -405,6 +413,7 @@
 				20085F74194B8244000EBB0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20085F75194B8244000EBB0A /* Build configuration list for PBXNativeTarget "planit_iosTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +422,7 @@
 				20085F77194B8244000EBB0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

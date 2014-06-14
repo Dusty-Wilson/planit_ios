@@ -1,19 +1,16 @@
 import UIKit
 
-var activityMgr: ActivityManager = ActivityManager()
+var addUserMgr: AddUserManager = AddUserManager()
 
-struct activity{
-    var name = "Un-Named"
-    var desc = "Un-Described"
+struct addUser{
+    var fname = "Un-Named"
+    var lname = "Un-Named"
+    var email = "Un-Named"
+    var phone = "Un-Named"
     
 }
 
-class ActivityManager: NSObject {
-    
-    var activities = activity[]()
-    
-    func    addActivity(name: String, desc: String){
-        activities.append(activity(name: name, desc: desc))
-    }
+class AddUserManager: NSObject {
+
     
 }
