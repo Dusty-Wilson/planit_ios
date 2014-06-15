@@ -18,7 +18,7 @@ class ThirdViewController: UIViewController {
     
     @IBAction func btnLogIn_Click(sender: UIButton){
         self.view.endEditing(true) //gets rid of keyboard
-        println("Button click worked")
+        println("Log In button click worked")
         println(txtEmail.text) // verifying that text field data is received
         
         // begin HTTP Post:
@@ -27,15 +27,15 @@ class ThirdViewController: UIViewController {
         
         var postString = NSString(format: "Email=\(email)&Password=\(password)")
         var postData = postString.dataUsingEncoding(NSUTF8StringEncoding)
-        var url = NSURL(string: "http://secure-taiga-5848.herokuapp.com/sessions")
+        var url = NSURL(string: "http:0.0.0.0:3000/mobile_sessions/new")
         var request = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "POST"
         request.HTTPBody = postData
         request.setValue("text/xml", forHTTPHeaderField: "X-Requested-With")
         var connection = NSURLConnection(request: request, delegate: self, startImmediately: false)
-        println(NSString)
         connection.start()
     }
+    
 
     /*
     // #pragma mark - Navigation

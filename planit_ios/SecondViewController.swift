@@ -32,7 +32,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
 //        txtEmail.text = ""
 //        txtPhone.text = ""
 //        txtPassword.text = ""
-        println("Button click worked")
+        println("Sign Up button click worked")
         println(txtFName.text) // verifying that text field data is received 
         
         // begin HTTP Post:
@@ -44,14 +44,13 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         
         var postString = NSString(format: "FName=\(fName)&LName=\(lName)&email=\(email)&phone=\(phone)&pword=\(password)")
         var postData = postString.dataUsingEncoding(NSUTF8StringEncoding)
-        var url = NSURL(string: "http://secure-taiga-5848.herokuapp.com/users")
+        var url = NSURL(string: "http://secure-taiga-5848.herokuapp.com/mobile_users/new")
         var request = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "POST"
             //        var requestBodyData: NSData = dataString.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding) as NSData
         request.HTTPBody = postData
         request.setValue("text/xml", forHTTPHeaderField: "X-Requested-With")
         var connection = NSURLConnection(request: request, delegate: self, startImmediately: false)
-          println(NSString)
         connection.start()
     }
     
