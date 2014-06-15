@@ -1,8 +1,8 @@
 import UIKit
 
-class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FirstViewController: UIViewController {
+    
     @IBOutlet var currentActivity :UILabel
-    @IBOutlet var tblActivities: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,23 +15,23 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     // Returning to view
-    override func viewWillAppear(animated: Bool) {
-        tblActivities.reloadData();
-    }
+//    override func viewWillAppear(animated: Bool) {
+//        tblActivities.reloadData();
+//    }
     
     // UI tableView datasource
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int{
-        return activityMgr.activities.count
-    }
+//    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int{
+//        return activityMgr.activities.count
+//    }
     
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!{
-        
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "test")
-        cell.text = activityMgr.activities[indexPath.row].name
-        cell.detailTextLabel.text = activityMgr.activities[indexPath.row].desc
-        
-        return cell
-    }
+//    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!{
+//        
+//        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "test")
+//        cell.text = activityMgr.activities[indexPath.row].name
+//        cell.detailTextLabel.text = activityMgr.activities[indexPath.row].desc
+//        
+//        return cell
+//    }
     
     @IBAction func phone(){
         currentActivity.text = "Test Activity"

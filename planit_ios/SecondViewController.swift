@@ -2,9 +2,13 @@ import UIKit
 
 class SecondViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet var txtActivity: UITextField!
-    @IBOutlet var txtDesc: UITextField!
-    
+    @IBOutlet var txtFName: UITextField!
+    @IBOutlet var txtLName: UITextField!
+    @IBOutlet var txtEmail: UITextField!
+    @IBOutlet var txtPhone: UITextField!
+    @IBOutlet var txtPassword: UITextField!
+    @IBOutlet var txtPasswordConfirm: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,17 +25,24 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     //When you right click and drag to the controller, you're give the optional
     //tasks within that class. 
     //all things within this function happen on the buton click
-    @IBAction func btnAddActivity_Click(sender: UIButton){
-        activityMgr.addActivity(txtActivity.text, desc: txtDesc.text)
+    @IBAction func btnCreateAccount_Click(sender: UIButton){
         self.view.endEditing(true) //gets rid of keyboard
-        txtActivity.text = ""
-        txtDesc.text = ""
-        self.tabBarController.selectedIndex = 0;
+//        txtFName.text = ""
+//        txtLName.text = ""
+//        txtEmail.text = ""
+//        txtPhone.text = ""
+//        txtPassword.text = ""
+        println("Button click worked")
+        println(txtFName.text) // verifying that text field data is received 
         
-        //begin HTTP Post:
-        var activityTitle = "Hard coded title"
-        var activityDesc = "hard coded description"
-        var postString = NSString(format: "Title=\(activityTitle)&Desc=\(activityDesc)")
+        // begin HTTP Post:
+        var fName = txtFName.text
+        var lName = txtLName.text
+        var email = txtEmail.text
+        var phone = txtPhone.text
+        var password = txtPassword.text
+        
+        var postString = NSString(format: "FName=\(fName)&LName=\(lName)&email=\(email)&phone=\(phone)&pword=\(password)")
         var postData = postString.dataUsingEncoding(NSUTF8StringEncoding)
         var url = NSURL(string: "http://secure-taiga-5848.herokuapp.com/users")
         var request = NSMutableURLRequest(URL: url)
@@ -40,7 +51,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         request.HTTPBody = postData
         request.setValue("text/xml", forHTTPHeaderField: "X-Requested-With")
         var connection = NSURLConnection(request: request, delegate: self, startImmediately: false)
-//        NSlog("sending request...", request)
+          println(NSString)
         connection.start()
     }
     
