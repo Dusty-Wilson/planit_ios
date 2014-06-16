@@ -1,8 +1,11 @@
 import UIKit
 
 class UserTripsViewController: UIViewController, NSURLConnectionDelegate, UITableViewDelegate {
-
-    @lazy var data = NSMutableData()
+    @IBOutlet var tableLabel: UILabel
+//    @IBOutlet var appsTableView : UITableView
+    
+    var data = NSMutableData()
+    var tableData: NSArray = NSArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +22,7 @@ class UserTripsViewController: UIViewController, NSURLConnectionDelegate, UITabl
     }
     
     func startConnection(){
-        let urlPath: String = "http://secure-taiga-5848.herokuapp.com/trips/1.json"
+        let urlPath: String = "http:0.0.0.0:3000/trips/1.json"
         var url: NSURL = NSURL(string: urlPath)
         var request: NSURLRequest = NSURLRequest(URL: url)
         var connection: NSURLConnection = NSURLConnection(request: request, delegate: self, startImmediately: false)
@@ -30,43 +33,37 @@ class UserTripsViewController: UIViewController, NSURLConnectionDelegate, UITabl
         self.data.appendData(data)
     }
     
-//        func btnLoad_Click(sender: UIButton){
-//            startConnection()
-//        }
-    
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         var err: NSError
-        // throwing an error on the line below (can't figure out where the error message is)
         var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
         println(jsonResult)
+        println(data)
     }
+    
+//    These below functions create a get request to trips/1.json in our first attepmt
+//    to display a json object in a table view.
+//    func startConnection(){
+//        let urlPath: String = "http://secure-taiga-5848.herokuapp.com/trips/1.json"
+//        var url: NSURL = NSURL(string: urlPath)
+//        var request: NSURLRequest = NSURLRequest(URL: url)
+//        var connection: NSURLConnection = NSURLConnection(request: request, delegate: self, startImmediately: false)
+//        connection.start()
+//    }
+//    
+//    func connection(connection: NSURLConnection!, didReceiveData data: NSData!){
+//        self.data.appendData(data)
+//    }
+//    
+//    func connectionDidFinishLoading(connection: NSURLConnection!) {
+//        var err: NSError
+//        var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+//        println(jsonResult)
+//        println(jsonResult["name"])
+//        tableLabel.text = jsonResult["name"] as String
+//    }
+    
     
 }
-        
-        
 
-//        let emptyDictionary = [:]
-//    var session = NSURLSession.sharedSession()
-//        session.dataTaskWithRequest(url,
-//            completionHandler: {(data: NSData!,
-//                response: NSURLResponse!,
-//                error: NSError!) in
-//                println(data)
-//                println(response)
-//                println(error)
-//            }).resume()
-    
-        
-    
-
-    /*
-    // #pragma mark - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 

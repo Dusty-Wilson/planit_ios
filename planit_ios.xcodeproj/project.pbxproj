@@ -13,8 +13,15 @@
 		20085F61194B8244000EBB0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20085F5F194B8244000EBB0A /* Main.storyboard */; };
 		20085F63194B8244000EBB0A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20085F62194B8244000EBB0A /* Images.xcassets */; };
 		20085F6F194B8244000EBB0A /* planit_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20085F6E194B8244000EBB0A /* planit_iosTests.swift */; };
-		20085F79194B827E000EBB0A /* ActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20085F78194B827E000EBB0A /* ActivityManager.swift */; };
 		20267182194CCC7E008B73FC /* UserTripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20267181194CCC7E008B73FC /* UserTripsViewController.swift */; };
+		20A07548194E5EED004255FF /* NewTripController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A07547194E5EED004255FF /* NewTripController.swift */; };
+		20AFC08D194F2690006B8AB7 /* TripShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AFC08C194F2690006B8AB7 /* TripShowViewController.swift */; };
+		20AFC08F194F26F5006B8AB7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AFC08E194F26F5006B8AB7 /* MapViewController.swift */; };
+		20AFC091194F27C3006B8AB7 /* NewActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AFC090194F27C3006B8AB7 /* NewActivityViewController.swift */; };
+		20AFC093194F27DB006B8AB7 /* NewExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AFC092194F27DB006B8AB7 /* NewExpenseViewController.swift */; };
+		20AFC095194F2E50006B8AB7 /* ActivityShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AFC094194F2E50006B8AB7 /* ActivityShowViewController.swift */; };
+		20AFC097194F2EA1006B8AB7 /* ExpensesShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AFC096194F2EA1006B8AB7 /* ExpensesShowViewController.swift */; };
+		20AFC099194F2ECC006B8AB7 /* ExpensesAdjustmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AFC098194F2ECC006B8AB7 /* ExpensesAdjustmentViewController.swift */; };
 		20C77309194CC6D900CD641E /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C77308194CC6D900CD641E /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,8 +46,15 @@
 		20085F68194B8244000EBB0A /* planit_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = planit_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20085F6D194B8244000EBB0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20085F6E194B8244000EBB0A /* planit_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = planit_iosTests.swift; sourceTree = "<group>"; };
-		20085F78194B827E000EBB0A /* ActivityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityManager.swift; sourceTree = "<group>"; };
 		20267181194CCC7E008B73FC /* UserTripsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTripsViewController.swift; sourceTree = "<group>"; };
+		20A07547194E5EED004255FF /* NewTripController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTripController.swift; sourceTree = "<group>"; };
+		20AFC08C194F2690006B8AB7 /* TripShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripShowViewController.swift; sourceTree = "<group>"; };
+		20AFC08E194F26F5006B8AB7 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		20AFC090194F27C3006B8AB7 /* NewActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewActivityViewController.swift; sourceTree = "<group>"; };
+		20AFC092194F27DB006B8AB7 /* NewExpenseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewExpenseViewController.swift; sourceTree = "<group>"; };
+		20AFC094194F2E50006B8AB7 /* ActivityShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityShowViewController.swift; sourceTree = "<group>"; };
+		20AFC096194F2EA1006B8AB7 /* ExpensesShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpensesShowViewController.swift; sourceTree = "<group>"; };
+		20AFC098194F2ECC006B8AB7 /* ExpensesAdjustmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpensesAdjustmentViewController.swift; sourceTree = "<group>"; };
 		20C77308194CC6D900CD641E /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,8 +101,15 @@
 				20085F5B194B8244000EBB0A /* FirstViewController.swift */,
 				20267181194CCC7E008B73FC /* UserTripsViewController.swift */,
 				20085F5D194B8244000EBB0A /* SecondViewController.swift */,
+				20AFC092194F27DB006B8AB7 /* NewExpenseViewController.swift */,
 				20C77308194CC6D900CD641E /* ThirdViewController.swift */,
-				20085F78194B827E000EBB0A /* ActivityManager.swift */,
+				20AFC08E194F26F5006B8AB7 /* MapViewController.swift */,
+				20AFC096194F2EA1006B8AB7 /* ExpensesShowViewController.swift */,
+				20AFC08C194F2690006B8AB7 /* TripShowViewController.swift */,
+				20AFC098194F2ECC006B8AB7 /* ExpensesAdjustmentViewController.swift */,
+				20AFC094194F2E50006B8AB7 /* ActivityShowViewController.swift */,
+				20AFC090194F27C3006B8AB7 /* NewActivityViewController.swift */,
+				20A07547194E5EED004255FF /* NewTripController.swift */,
 				20085F5F194B8244000EBB0A /* Main.storyboard */,
 				20085F62194B8244000EBB0A /* Images.xcassets */,
 				20085F57194B8244000EBB0A /* Supporting Files */,
@@ -221,11 +242,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				20267182194CCC7E008B73FC /* UserTripsViewController.swift in Sources */,
-				20085F79194B827E000EBB0A /* ActivityManager.swift in Sources */,
 				20085F5E194B8244000EBB0A /* SecondViewController.swift in Sources */,
 				20C77309194CC6D900CD641E /* ThirdViewController.swift in Sources */,
+				20AFC091194F27C3006B8AB7 /* NewActivityViewController.swift in Sources */,
+				20AFC08F194F26F5006B8AB7 /* MapViewController.swift in Sources */,
+				20AFC097194F2EA1006B8AB7 /* ExpensesShowViewController.swift in Sources */,
+				20A07548194E5EED004255FF /* NewTripController.swift in Sources */,
 				20085F5A194B8244000EBB0A /* AppDelegate.swift in Sources */,
+				20AFC095194F2E50006B8AB7 /* ActivityShowViewController.swift in Sources */,
+				20AFC099194F2ECC006B8AB7 /* ExpensesAdjustmentViewController.swift in Sources */,
+				20AFC08D194F2690006B8AB7 /* TripShowViewController.swift in Sources */,
 				20085F5C194B8244000EBB0A /* FirstViewController.swift in Sources */,
+				20AFC093194F27DB006B8AB7 /* NewExpenseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

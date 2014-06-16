@@ -19,19 +19,8 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    //Events
-    //Could be named anything. after this, you have to right click the item
-    //and create a connection to the controller. 
-    //When you right click and drag to the controller, you're give the optional
-    //tasks within that class. 
-    //all things within this function happen on the buton click
     @IBAction func btnCreateAccount_Click(sender: UIButton){
         self.view.endEditing(true) //gets rid of keyboard
-//        txtFName.text = ""
-//        txtLName.text = ""
-//        txtEmail.text = ""
-//        txtPhone.text = ""
-//        txtPassword.text = ""
         println("Sign Up button click worked")
         println(txtFName.text) // verifying that text field data is received 
         
@@ -44,7 +33,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         
         var postString = NSString(format: "FName=\(fName)&LName=\(lName)&email=\(email)&phone=\(phone)&pword=\(password)")
         var postData = postString.dataUsingEncoding(NSUTF8StringEncoding)
-        var url = NSURL(string: "http://secure-taiga-5848.herokuapp.com/mobile_users/new")
+        var url = NSURL(string: "http:0.0.0.0:3000/mobile_users/new")
         var request = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "POST"
             //        var requestBodyData: NSData = dataString.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding) as NSData
