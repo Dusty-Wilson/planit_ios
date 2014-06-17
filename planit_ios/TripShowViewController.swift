@@ -8,17 +8,34 @@
 
 import UIKit
 
-class TripShowViewController: UIViewController {
+class TripShowViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tableView(tableView: UITableView!, numberOfRowsInSection section:    Int) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) ->        UITableViewCell! {
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyTestCell")
+        
+//        cell.text = "Row #\(indexPath.row)"
+//        cell.detailTextLabel.text = "Subtitle #\(indexPath.row)"
+//        
+        return cell
     }
     
 

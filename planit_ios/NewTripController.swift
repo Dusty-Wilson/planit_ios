@@ -8,7 +8,6 @@ class NewTripViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var txtStartDate: UITextField!
     @IBOutlet var txtEndDate: UITextField!
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

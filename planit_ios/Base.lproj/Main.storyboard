@@ -104,7 +104,7 @@
                                 </state>
                                 <connections>
                                     <action selector="btnLogIn_Click:" destination="Exh-c1-qiF" eventType="touchUpInside" id="Wmc-1f-xD5"/>
-                                    <segue destination="9Kx-uX-ylC" kind="modal" id="mWH-8I-rbR"/>
+                                    <segue destination="qxA-1Q-ZLD" kind="modal" id="9VM-BG-C0i"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n45-Ez-8t1">
@@ -135,7 +135,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="txtEmail" destination="Wwc-XE-EPt" id="2CM-Ey-uyF"/>
+                        <outlet property="txtEmail" destination="Wwc-XE-EPt" id="fTA-FE-FbH"/>
                         <outlet property="txtPassword" destination="n3G-wl-OA2" id="HSh-vG-S2J"/>
                     </connections>
                 </viewController>
@@ -143,64 +143,7 @@
             </objects>
             <point key="canvasLocation" x="2604" y="1719"/>
         </scene>
-        <!--User Trips View Controller - My Trips-->
-        <scene sceneID="kW2-mJ-J6s">
-            <objects>
-                <viewController id="hAT-0E-amP" customClass="UserTripsViewController" customModule="planit_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="M6d-4C-bfd"/>
-                        <viewControllerLayoutGuide type="bottom" id="cun-94-EUa"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="e7b-I0-Cls">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Trips" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTc-vO-egG">
-                                <rect key="frame" x="116" y="20" width="115" height="37"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Kb7-D0-j8V">
-                                <rect key="frame" x="0.0" y="65" width="320" height="503"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="delegate" destination="hAT-0E-amP" id="PW3-Q7-5Qn"/>
-                                </connections>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8Y-ss-Df5">
-                                <rect key="frame" x="10" y="128" width="157" height="30"/>
-                                <state key="normal" title="Trip 1 - Save the World">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q78-eG-tzH">
-                                <rect key="frame" x="10" y="166" width="142" height="30"/>
-                                <state key="normal" title="Trip 2 - Spring Break">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="lhz-Wx-8mw" kind="modal" id="ySY-uL-yuv"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="My Trips" id="pMF-8q-Mk5">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="voG-gI-Jop">
-                            <connections>
-                                <segue destination="Kyi-Rm-Yel" kind="modal" id="JFQ-ZJ-tCN"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="21E-Xa-B73" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3694" y="1365"/>
-        </scene>
-        <!--New Trip View Controller - New Trip-->
+        <!--New Trip View Controller-->
         <scene sceneID="R9V-u9-GMA">
             <objects>
                 <viewController id="Kyi-Rm-Yel" customClass="NewTripViewController" customModule="planit_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -244,12 +187,12 @@
                                 </state>
                                 <connections>
                                     <action selector="btnCreateTrip_Click:" destination="Kyi-Rm-Yel" eventType="touchUpInside" id="Qnr-TJ-gbB"/>
+                                    <segue destination="qxA-1Q-ZLD" kind="modal" id="UhL-Vx-5ed"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="New Trip" id="znM-Ze-raw"/>
                     <connections>
                         <outlet property="txtEndDate" destination="RLk-6j-DPW" id="yTe-RH-uU9"/>
                         <outlet property="txtStartDate" destination="AXj-Tj-Dzw" id="gCR-bs-vDU"/>
@@ -260,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HFN-jx-He7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3694" y="2017"/>
+            <point key="canvasLocation" x="3686" y="2072"/>
         </scene>
         <!--Trip Show View Controller-->
         <scene sceneID="2TN-aU-RgO">
@@ -286,27 +229,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hAT-0E-amP" kind="modal" id="VcY-ob-PbP"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cag-Gf-Ydj">
-                                <rect key="frame" x="143" y="289" width="43" height="30"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                <state key="normal" title="Details">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="X43-dq-hek" kind="modal" id="iKB-d8-20r"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdF-S4-0dB">
-                                <rect key="frame" x="158" y="269" width="53" height="30"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                <state key="normal" title="Details">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="X43-dq-hek" kind="modal" id="ckU-jk-6fQ"/>
+                                    <segue destination="qxA-1Q-ZLD" kind="modal" id="TTb-BR-9fR"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3/21/2015 - 3/28/2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEs-UU-C5L">
@@ -345,18 +268,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fishing Charter 3/23/2014" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWa-js-fjO">
-                                <rect key="frame" x="8" y="267" width="152" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Parasailing 3/26/2014" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OY8-OH-IAO">
-                                <rect key="frame" x="8" y="287" width="127" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activities:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Rc-uZ-tB6">
                                 <rect key="frame" x="8" y="249" width="74" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -364,25 +275,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Expenses:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D51-Aq-u1n">
-                                <rect key="frame" x="12" y="342" width="80" height="21"/>
+                                <rect key="frame" x="12" y="393" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You are Owed:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xre-H7-uO2">
-                                <rect key="frame" x="12" y="371" width="113" height="21"/>
+                                <rect key="frame" x="12" y="422" width="113" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$340.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFo-TG-kwe">
-                                <rect key="frame" x="245" y="371" width="62" height="21"/>
+                                <rect key="frame" x="245" y="422" width="62" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.22229916128508509" green="0.65521364795918369" blue="0.17690148784369161" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLs-Ne-gJ9">
-                                <rect key="frame" x="12" y="400" width="78" height="30"/>
+                                <rect key="frame" x="12" y="451" width="78" height="30"/>
                                 <state key="normal" title="See Details">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -391,7 +302,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8SQ-rG-2DD">
-                                <rect key="frame" x="187" y="400" width="120" height="30"/>
+                                <rect key="frame" x="187" y="451" width="120" height="30"/>
                                 <state key="normal" title="Make Adjustment">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -399,18 +310,8 @@
                                     <segue destination="FPP-sa-sQG" kind="modal" id="Lt0-9a-vHp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oO6-ed-jGn">
-                                <rect key="frame" x="0.0" y="308" width="100" height="30"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                <state key="normal" title="Create Activity">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="WPi-Aa-LF0" kind="modal" id="rZC-Tv-ehS"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbY-rI-dtG">
-                                <rect key="frame" x="12" y="481" width="35" height="30"/>
+                                <rect key="frame" x="12" y="518" width="35" height="30"/>
                                 <state key="normal" title="Map!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -419,7 +320,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gI-dI-bNI">
-                                <rect key="frame" x="12" y="429" width="144" height="30"/>
+                                <rect key="frame" x="12" y="480" width="144" height="30"/>
                                 <state key="normal" title="Create New Expense">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -427,13 +328,17 @@
                                     <segue destination="MOO-VY-4JE" kind="modal" id="lTr-Gu-wgo"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cjH-s7-BYv">
+                                <rect key="frame" x="21" y="278" width="279" height="102"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q2x-r6-jHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4206" y="1365"/>
+            <point key="canvasLocation" x="4214" y="1336"/>
         </scene>
         <!--New Activity View Controller-->
         <scene sceneID="MEc-0T-BMy">
@@ -501,7 +406,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4HY-K5-h7l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4668" y="1031"/>
+            <point key="canvasLocation" x="4676" y="1002"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="LoN-8j-TIp">
@@ -527,7 +432,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="28v-C2-UhY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4206" y="2017"/>
+            <point key="canvasLocation" x="4198" y="2072"/>
         </scene>
         <!--New Expense View Controller-->
         <scene sceneID="isg-kY-aNa">
@@ -545,7 +450,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="boe-Di-nkM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4668" y="1693"/>
+            <point key="canvasLocation" x="4668" y="1719"/>
         </scene>
         <!--Expenses Show View Controller-->
         <scene sceneID="tCX-xc-EMw">
@@ -563,7 +468,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hiX-W5-iaz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5078" y="1693"/>
+            <point key="canvasLocation" x="5078" y="1719"/>
         </scene>
         <!--Expenses Adjustment View Controller-->
         <scene sceneID="4S4-Ix-shJ">
@@ -581,7 +486,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LFR-v3-Tdm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5512" y="1693"/>
+            <point key="canvasLocation" x="5512" y="1719"/>
         </scene>
         <!--Activity Show View Controller-->
         <scene sceneID="4XC-OS-I4u">
@@ -599,7 +504,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T1t-kK-AyO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5078" y="1031"/>
+            <point key="canvasLocation" x="5086" y="1002"/>
         </scene>
         <!--Second View Controller - Creat Account-->
         <scene sceneID="wg7-f3-ORb">
@@ -652,7 +557,7 @@
                                 </state>
                                 <connections>
                                     <action selector="btnCreateAccount_Click:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="xUu-a5-Al5"/>
-                                    <segue destination="9Kx-uX-ylC" kind="modal" id="a9h-13-lty"/>
+                                    <segue destination="qxA-1Q-ZLD" kind="modal" id="NG1-04-avj"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FML-uY-3p3">
@@ -704,23 +609,70 @@
             </objects>
             <point key="canvasLocation" x="2602" y="1067"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="JrF-xk-IoQ">
+        <!--User Trips Table View Controller - My Trips-->
+        <scene sceneID="zan-Zp-HTe">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Kx-uX-ylC" sceneMemberID="viewController">
+                <tableViewController id="yf7-O2-mvd" customClass="UserTripsTableViewController" customModule="planit_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="zJ9-z5-Syf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ListPrototypeCell" id="IeA-XK-l2a">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IeA-XK-l2a" id="HC3-C6-e7Q">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHq-4U-O0v">
+                                            <rect key="frame" x="254" y="7" width="47" height="30"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <state key="normal" title="Details">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="btnDetail_Click:" destination="yf7-O2-mvd" eventType="touchUpInside" id="Dro-2v-zHg"/>
+                                                <segue destination="lhz-Wx-8mw" kind="modal" id="06M-2q-gTu"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yf7-O2-mvd" id="l04-JX-MDA"/>
+                            <outlet property="delegate" destination="yf7-O2-mvd" id="5Xo-nf-D7t"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My Trips" id="uYO-70-SbT">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hxS-AT-evS">
+                            <connections>
+                                <segue destination="Kyi-Rm-Yel" kind="modal" id="2mo-ce-Ygj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GEK-Li-Odf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3694" y="1373"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="opT-rC-tZi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qxA-1Q-ZLD" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rSg-wJ-ipA">
+                    <navigationItem key="navigationItem" id="llP-mK-N4r"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KBP-rS-sMT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="hAT-0E-amP" kind="relationship" relationship="rootViewController" id="TPR-9R-3ji"/>
+                        <segue destination="yf7-O2-mvd" kind="relationship" relationship="rootViewController" id="gg3-lb-sAQ"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jpm-Tz-vhl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eag-4s-HHn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3162" y="1365"/>
+            <point key="canvasLocation" x="3154" y="1373"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -729,11 +681,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="mWH-8I-rbR"/>
+        <segue reference="06M-2q-gTu"/>
+        <segue reference="TTb-BR-9fR"/>
+        <segue reference="1vC-5N-eSx"/>
         <segue reference="Bhi-9x-E2y"/>
-        <segue reference="W6c-MQ-m5t"/>
-        <segue reference="pNo-bm-Gb6"/>
-        <segue reference="iKB-d8-20r"/>
-        <segue reference="VcY-ob-PbP"/>
     </inferredMetricsTieBreakers>
 </document>
