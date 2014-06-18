@@ -617,7 +617,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Trips" id="uYO-70-SbT">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hxS-AT-evS"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hxS-AT-evS">
+                            <connections>
+                                <segue destination="Kyi-Rm-Yel" kind="push" id="AzS-Zz-zB1"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GEK-Li-Odf" userLabel="First Responder" sceneMemberID="firstResponder"/>
