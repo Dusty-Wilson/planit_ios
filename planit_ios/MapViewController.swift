@@ -22,67 +22,28 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        println("++++++++++++++++++")
+        println(ActivityName.activity)
 
-        var tripLocLat: CLLocationDegrees = 48.399193
-        var tripLocLong: CLLocationDegrees = 9.993341
-        var latDelta: CLLocationDegrees = 0.01
-        var longDelta: CLLocationDegrees = 0.01
+        var tripLocLat: CLLocationDegrees = ActivityName.activity["latitude"] as CLLocationDegrees
+        var tripLocLong: CLLocationDegrees = ActivityName.activity["longitude"] as CLLocationDegrees
+        var latDelta: CLLocationDegrees = 0.05
+        var longDelta: CLLocationDegrees = 0.05
         var span: MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
-        var userLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(tripLocLat, tripLocLong)
-        var region: MKCoordinateRegion = MKCoordinateRegionMake(userLocation, span)
+        var activityLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(tripLocLat, tripLocLong)
+        var region: MKCoordinateRegion = MKCoordinateRegionMake(activityLocation, span)
         self.mapView.setRegion(region, animated: true)
+        
+        var location = MKPointAnnotation()
+        location.coordinate = activityLocation
+        location.title = ActivityName.activity["name"] as String
+        location.subtitle = ActivityName.activity["description"] as String
+//        location.subtitle = ActivityName.activity["location"] as String
+        self.mapView.addAnnotation(location)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-//    func getFromWeb(){
-//        println("function started to get trip activities from web app")
-//        println("Trip Name sent to web app:")
-//        println(TripName.name)
-//        var postString = NSString(format: "trip_name=\(TripName.name)")
-//        var postData = postString.dataUsingEncoding(NSUTF8StringEncoding)
-//        var urlPost = NSURL(string: "http:0.0.0.0:3000/'mobile_trips/activities_detail'")
-//        var request = NSMutableURLRequest(URL: urlPost)
-//        request.HTTPMethod = "POST"
-//        request.HTTPBody = postData
-//        request.setValue("text/xml", forHTTPHeaderField: "X-Requested-With")
-//        var connection = NSURLConnection(request: request, delegate: self, startImmediately: false)
-//        connection.start()
-//        
-//    }
-//    
-//    func connection(connection: NSURLConnection!, didReceiveData data: NSData!){
-//        self.data.appendData(data)
-//    }
-//    
-//    func connectionDidFinishLoading(connection: NSURLConnection!) {
-//        println("received data from server")
-//        var err: NSError
-//        var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
-//        println("+++++++++++++++++++")
-//        println(jsonResult)
-////        for each in jsonResult {
-////            self.tripActivities.addObject(each["first_name"])
-////        }
-//        self.activitiesTableView.reloadData()
-//    }
-    
-//    func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
-//        return 1
-//    }
-//    
-//    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return self.tripActivities.count
-//    }
-//    
-//    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-//        let cell : UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "ActivityCell")
-////        var rowData = self.tripTravelers.objectAtIndex(indexPath.row)
-////        cell.text = rowData as String
-//        return cell
-//        
-//    }
 
 }

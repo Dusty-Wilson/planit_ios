@@ -12,10 +12,10 @@ class TripActivitiesTableViewController: UITableViewController, UITableViewDataS
     
     var data = NSMutableData()
     var tripActivities: NSMutableArray = []
+    var persistingActivities: NSMutableArray = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        println(TripName.name)
         postToWeb()
     }
     
@@ -46,6 +46,7 @@ class TripActivitiesTableViewController: UITableViewController, UITableViewDataS
 //        println("++++++++++++++++++")
         //        println(jsonResult)
         for each in jsonResult {
+            self.persistingActivities.addObject(each)
             self.tripActivities.addObject(each["name"])
         }
         self.tableView.reloadData()
@@ -68,5 +69,9 @@ class TripActivitiesTableViewController: UITableViewController, UITableViewDataS
 //        println("add text to cell")
         return cell
         
+    }
+    
+    override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        ActivityName.activity = self.persistingActivities[indexPath.row] as NSDictionary
     }
 }

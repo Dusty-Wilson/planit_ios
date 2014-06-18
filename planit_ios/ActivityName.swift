@@ -7,5 +7,5 @@
 //
 
 struct ActivityName {
-    static var name:String?
+    static var activity = [:]
 }

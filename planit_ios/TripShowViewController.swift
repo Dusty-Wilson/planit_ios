@@ -24,9 +24,9 @@ class TripShowViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         tripNameHeader.text = TripName.name!
-        println("trip show view load")
-        println("should reflect trip show name++++++++++++++++")
-        println(TripName.name)
+//        println("trip show view load")
+//        println("should reflect trip show name++++++++++++++++")
+//        println(TripName.name)
         getFromWeb()
     }
     
