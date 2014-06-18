@@ -1,3 +1,4 @@
+
 //
 //  UserTripsTableViewController.swift
 //  planit_ios
@@ -12,7 +13,7 @@ class UserTripsTableViewController: UITableViewController {
     
     var data = NSMutableData()
     var tripItems: NSMutableArray = []
-    var hardCodedId = 13
+    var hardCodedId = 9 //////////////////////////////////////////////////
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,16 +22,15 @@ class UserTripsTableViewController: UITableViewController {
         println(UserId.id)
         getFromWeb()
         self.tableView.reloadData()
-}
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    
     func getFromWeb(){
         println("function started to get user trips from web app")
-        let urlPath: String = "http://localhost:3000/mobile_trips/user_trips?user_id=\(UserId.id)"
+        let urlPath: String = "http://localhost:3000/mobile_trips/user_trips?user_id=\(hardCodedId)"///////////////////////////////
         
         func getJSON(urlToRequest: String) -> NSData{
             return NSData(contentsOfURL: NSURL(string:urlToRequest))
@@ -66,63 +66,15 @@ class UserTripsTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         let CellIndentifier: NSString = "ListPrototypeCell"
-        let btnDetail = UIButton()
         var cell : UITableViewCell=tableView.dequeueReusableCellWithIdentifier(CellIndentifier) as UITableViewCell
         var tripitem: TripItem = self.tripItems.objectAtIndex(indexPath.row) as TripItem
         cell.textLabel.text = tripitem.tripName
         return cell
-        self.view.addSubview(btnDetail)
-        btnDetail.tag = indexPath.row;
-    }
-    
-    @IBAction func btnDetail_Click(sender: UIButton){
         
     }
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView?, canEditRowAtIndexPath indexPath: NSIndexPath?) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
-        return true
+    override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        var rowData = self.tripItems[indexPath.row] as TripItem
+        TripName.name = rowData.tripName
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView?, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath?) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView?, moveRowAtIndexPath fromIndexPath: NSIndexPath?, toIndexPath: NSIndexPath?) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView?, canMoveRowAtIndexPath indexPath: NSIndexPath?) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // #pragma mark - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -4,7 +4,7 @@ class ThirdViewController: UIViewController, NSURLConnectionDelegate {
 
     @IBOutlet var txtEmail: UITextField!
     @IBOutlet var txtPassword: UITextField!
-    
+
     var data = NSMutableData()
     
     override func viewDidLoad() {
@@ -27,7 +27,7 @@ class ThirdViewController: UIViewController, NSURLConnectionDelegate {
         println(txtEmail.text)
         var email = txtEmail.text
         var password = txtPassword.text
-        var postString = NSString(format: "Email=\(email)&Password=\(password)")
+        var postString = NSString(format: "Password=\(password)")///////////////////////////////
         var postData = postString.dataUsingEncoding(NSUTF8StringEncoding)
         var urlPost = NSURL(string: "http:0.0.0.0:3000/mobile_sessions/sign_in")
         var request = NSMutableURLRequest(URL: urlPost)
@@ -38,15 +38,6 @@ class ThirdViewController: UIViewController, NSURLConnectionDelegate {
         connection.start()
 
     }
-    
-//    func getFromWeb(){
-//        println("function started to get user ID from web app")
-//        let urlPath: String = "http://0.0.0.0:3000/mobile_sessions/sign_in"
-//        var url: NSURL = NSURL(string: urlPath)
-//        var request: NSURLRequest = NSURLRequest(URL: url)
-//        var connection: NSURLConnection = NSURLConnection(request: request, delegate: self, startImmediately: false)
-//        connection.start()
-//    }
     
     func connection(connection: NSURLConnection!, didReceiveData data: NSData!){
         self.data.appendData(data)
@@ -65,12 +56,6 @@ class ThirdViewController: UIViewController, NSURLConnectionDelegate {
         UserId.id = userId
         println("struct after user id has been assigned to it:")
         println(UserId.id)
-        
-//        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-//        UserTripsTableViewController.id = Int(userId)
-//        self.presentViewController(UserTripsTableViewController, animated:true, completion:nil)
-    }
+     }
+    
 }
-
-
-
