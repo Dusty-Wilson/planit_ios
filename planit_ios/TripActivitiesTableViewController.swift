@@ -1,4 +1,4 @@
-//
+
 //  TripActivitiesTableViewController.swift
 //  planit_ios
 //
@@ -15,6 +15,7 @@ class TripActivitiesTableViewController: UITableViewController, UITableViewDataS
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        println(TripName.name)
         postToWeb()
     }
     
@@ -23,7 +24,6 @@ class TripActivitiesTableViewController: UITableViewController, UITableViewDataS
     }
     
     func postToWeb(){
-        println("function started to post trip name to web app")
         var postString = NSString(format: "trip_name=\(TripName.name)")
         var postData = postString.dataUsingEncoding(NSUTF8StringEncoding)
         var urlPost = NSURL(string: "http:0.0.0.0:3000/mobile_trips/activities_detail")
@@ -41,10 +41,9 @@ class TripActivitiesTableViewController: UITableViewController, UITableViewDataS
     }
     
     func connectionDidFinishLoading(connection: NSURLConnection!) {
-        println("received data from server")
         var err: NSError
         var jsonResult: NSArray = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSArray
-        println("++++++++++++++++++")
+//        println("++++++++++++++++++")
         //        println(jsonResult)
         for each in jsonResult {
             self.tripActivities.addObject(each["name"])
@@ -66,7 +65,7 @@ class TripActivitiesTableViewController: UITableViewController, UITableViewDataS
         var cell : UITableViewCell=tableView.dequeueReusableCellWithIdentifier(CellIndentifier) as UITableViewCell
         var tripActivity = self.tripActivities.objectAtIndex(indexPath.row) as String
         cell.textLabel.text = tripActivity
-        println("add text to cell")
+//        println("add text to cell")
         return cell
         
     }
