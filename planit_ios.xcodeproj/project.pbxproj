@@ -13,6 +13,11 @@
 		20085F5E194B8244000EBB0A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20085F5D194B8244000EBB0A /* SecondViewController.swift */; };
 		20085F63194B8244000EBB0A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20085F62194B8244000EBB0A /* Images.xcassets */; };
 		20085F6F194B8244000EBB0A /* planit_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20085F6E194B8244000EBB0A /* planit_iosTests.swift */; };
+		2052865719524F1700956EB8 /* PlanitFlat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2052865619524F1700956EB8 /* PlanitFlat.jpg */; };
+		205286591952504300956EB8 /* planit-flatgray.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 205286581952504300956EB8 /* planit-flatgray.jpg */; };
+		2052865B1952529C00956EB8 /* planit-darkblue.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2052865A1952529C00956EB8 /* planit-darkblue.jpeg */; };
+		2052865D1952530C00956EB8 /* planit-containerwhite.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2052865C1952530C00956EB8 /* planit-containerwhite.jpg */; };
+		2052865F1952531600956EB8 /* planit-containergradient.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2052865E1952531600956EB8 /* planit-containergradient.jpg */; };
 		206CF7F6194F823300A555A2 /* TripItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206CF7F5194F823300A555A2 /* TripItem.swift */; };
 		206CF7F8194F86F700A555A2 /* UserTripsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206CF7F7194F86F700A555A2 /* UserTripsTableViewController.swift */; };
 		20A07548194E5EED004255FF /* NewTripController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A07547194E5EED004255FF /* NewTripController.swift */; };
@@ -54,6 +59,11 @@
 		20085F68194B8244000EBB0A /* planit_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = planit_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20085F6D194B8244000EBB0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20085F6E194B8244000EBB0A /* planit_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = planit_iosTests.swift; sourceTree = "<group>"; };
+		2052865619524F1700956EB8 /* PlanitFlat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = PlanitFlat.jpg; path = ../../../Downloads/PlanitFlat.jpg; sourceTree = "<group>"; };
+		205286581952504300956EB8 /* planit-flatgray.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "planit-flatgray.jpg"; path = "../../../Downloads/planit-flatgray.jpg"; sourceTree = "<group>"; };
+		2052865A1952529C00956EB8 /* planit-darkblue.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "planit-darkblue.jpeg"; path = "../../../Downloads/planit-darkblue.jpeg"; sourceTree = "<group>"; };
+		2052865C1952530C00956EB8 /* planit-containerwhite.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "planit-containerwhite.jpg"; path = "../../../Downloads/planit-containerwhite.jpg"; sourceTree = "<group>"; };
+		2052865E1952531600956EB8 /* planit-containergradient.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "planit-containergradient.jpg"; path = "../../../Downloads/planit-containergradient.jpg"; sourceTree = "<group>"; };
 		206CF7F5194F823300A555A2 /* TripItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripItem.swift; sourceTree = "<group>"; };
 		206CF7F7194F86F700A555A2 /* UserTripsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTripsTableViewController.swift; sourceTree = "<group>"; };
 		20A07547194E5EED004255FF /* NewTripController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTripController.swift; sourceTree = "<group>"; };
@@ -131,6 +141,11 @@
 				20AFC08E194F26F5006B8AB7 /* MapViewController.swift */,
 				20AF67ED1950D3EF00F47F0A /* Main.storyboard */,
 				20085F62194B8244000EBB0A /* Images.xcassets */,
+				2052865C1952530C00956EB8 /* planit-containerwhite.jpg */,
+				2052865E1952531600956EB8 /* planit-containergradient.jpg */,
+				205286581952504300956EB8 /* planit-flatgray.jpg */,
+				2052865A1952529C00956EB8 /* planit-darkblue.jpeg */,
+				2052865619524F1700956EB8 /* PlanitFlat.jpg */,
 				20C4F92A19516EE9009188D8 /* planit-1.jpg */,
 				20085F57194B8244000EBB0A /* Supporting Files */,
 				206CF7F5194F823300A555A2 /* TripItem.swift */,
@@ -247,9 +262,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2052865719524F1700956EB8 /* PlanitFlat.jpg in Resources */,
+				2052865F1952531600956EB8 /* planit-containergradient.jpg in Resources */,
 				20C4F92B19516EE9009188D8 /* planit-1.jpg in Resources */,
+				205286591952504300956EB8 /* planit-flatgray.jpg in Resources */,
 				20085F63194B8244000EBB0A /* Images.xcassets in Resources */,
 				20AF67EF1950D3EF00F47F0A /* Main.storyboard in Resources */,
+				2052865D1952530C00956EB8 /* planit-containerwhite.jpg in Resources */,
+				2052865B1952529C00956EB8 /* planit-darkblue.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

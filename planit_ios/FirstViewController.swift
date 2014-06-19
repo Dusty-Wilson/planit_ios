@@ -1,11 +1,20 @@
 import UIKit
+import QuartzCore
 
 class FirstViewController: UIViewController {
     
     @IBOutlet var currentActivity :UILabel
+    @IBOutlet var firstActionImage :UIImageView
+    @IBOutlet var secondActionImage :UIImageView
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        firstActionImage.layer.cornerRadius = 10.0
+        firstActionImage.clipsToBounds = true;
+        secondActionImage.layer.cornerRadius = 10.0
+        secondActionImage.clipsToBounds = true;
         // Do any additional setup after loading the view, typically from a nib.
     }
     

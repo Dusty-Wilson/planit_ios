@@ -14,21 +14,18 @@ import CoreLocation
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate  {
     
     @IBOutlet var mapView: MKMapView
-    
-    //    var data = NSMutableData()
-//    @IBOutlet var activitiesTableView: UITableView
-    
-//    var tripActivities: NSMutableArray = []
+    @IBOutlet var activityName: UILabel
+    @IBOutlet var activityDescriptionName: UILabel
+    @IBOutlet var activityTime: UILabel
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        println("++++++++++++++++++")
-        println(ActivityName.activity)
-
+//        println("++++++++++++++++++")
+//        println(ActivityName.activity)
         var tripLocLat: CLLocationDegrees = ActivityName.activity["latitude"] as CLLocationDegrees
         var tripLocLong: CLLocationDegrees = ActivityName.activity["longitude"] as CLLocationDegrees
-        var latDelta: CLLocationDegrees = 0.05
-        var longDelta: CLLocationDegrees = 0.05
+        var latDelta: CLLocationDegrees = 0.08
+        var longDelta: CLLocationDegrees = 0.08
         var span: MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
         var activityLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(tripLocLat, tripLocLong)
         var region: MKCoordinateRegion = MKCoordinateRegionMake(activityLocation, span)
@@ -37,8 +34,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         var location = MKPointAnnotation()
         location.coordinate = activityLocation
         location.title = ActivityName.activity["name"] as String
-        location.subtitle = ActivityName.activity["description"] as String
-//        location.subtitle = ActivityName.activity["location"] as String
+        location.subtitle = ActivityName.activity["location"] as String
+        activityName.text = ActivityName.activity["name"] as String
+        activityDescriptionName.text = ActivityName.activity["description"] as String
+        activityTime.text = ActivityName.activity["start_time"] as String
         self.mapView.addAnnotation(location)
     }
 

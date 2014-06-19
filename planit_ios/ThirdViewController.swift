@@ -2,12 +2,15 @@ import UIKit
 
 class ThirdViewController: UIViewController, NSURLConnectionDelegate {
 
+    @IBOutlet var firstActionImage :UIImageView
     @IBOutlet var txtEmail: UITextField!
     @IBOutlet var txtPassword: UITextField!
 
     var data = NSMutableData()
     
     override func viewDidLoad() {
+        firstActionImage.layer.cornerRadius = 10.0
+        firstActionImage.clipsToBounds = true;
         super.viewDidLoad()
     }
 

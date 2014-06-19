@@ -1,7 +1,8 @@
 import UIKit
 
 class SecondViewController: UIViewController, UITextFieldDelegate {
-    
+
+    @IBOutlet var firstActionImage :UIImageView
     @IBOutlet var txtFName: UITextField!
     @IBOutlet var txtLName: UITextField!
     @IBOutlet var txtEmail: UITextField!
@@ -11,6 +12,8 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        firstActionImage.layer.cornerRadius = 10.0
+        firstActionImage.clipsToBounds = true;
         // Do any additional setup after loading the view, typically from a nib.
     }
     

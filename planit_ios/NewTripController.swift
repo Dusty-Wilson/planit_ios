@@ -2,6 +2,7 @@ import UIKit
 
 class NewTripViewController: UIViewController, UITextFieldDelegate {
    
+    @IBOutlet var firstActionImage :UIImageView
     @IBOutlet var txtTripName: UITextField!
     @IBOutlet var txtTripDesc: UITextField!
     @IBOutlet var txtTripLoc: UITextField!
@@ -10,7 +11,8 @@ class NewTripViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        firstActionImage.layer.cornerRadius = 10.0
+        firstActionImage.clipsToBounds = true;
     }
 
     override func didReceiveMemoryWarning() {

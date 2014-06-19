@@ -17,6 +17,7 @@ class UserTripsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        tableView.frame = CGRectMake(3.0)
         println("Trip Table View Load")
         println("struct value in Table View class:")
         println(UserId.id)
