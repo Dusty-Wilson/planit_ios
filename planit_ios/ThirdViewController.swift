@@ -30,7 +30,7 @@ class ThirdViewController: UIViewController, NSURLConnectionDelegate {
         println(txtEmail.text)
         var email = txtEmail.text
         var password = txtPassword.text
-        var postString = NSString(format: "Password=\(password)")///////////////////////////////
+        var postString = NSString(format: "Password=\(password)&Email=\(email)")///////////////////////////////
         var postData = postString.dataUsingEncoding(NSUTF8StringEncoding)
         var urlPost = NSURL(string: "http:0.0.0.0:3000/mobile_sessions/sign_in")
         var request = NSMutableURLRequest(URL: urlPost)

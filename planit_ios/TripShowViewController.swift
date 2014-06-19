@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 class TripShowViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -14,7 +15,12 @@ class TripShowViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet var locationHeader: UILabel
     @IBOutlet var startDateHeader: UILabel
     @IBOutlet var travelersTableView: UITableView
-
+    @IBOutlet var expensesButton: UIButton
+    @IBOutlet var firstActionImage :UIImageView
+    @IBOutlet var secondActionImage :UIImageView
+    @IBOutlet var thirdActionImage :UIImageView
+    @IBOutlet var fourthActionImage :UIImageView
+    
     var data = NSMutableData()
     var tripDetails: NSMutableArray = []
     var tripTravelers: NSMutableArray = []
@@ -23,6 +29,20 @@ class TripShowViewController: UIViewController, UITableViewDataSource, UITableVi
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        expensesButton.layer.borderWidth = 1.5
+        expensesButton.layer.frame.size.height = 5.0 as CGFloat
+        expensesButton.layer.frame.size.width = 35.0 as CGFloat
+        expensesButton.layer.borderColor = UIColor.redColor().CGColor
+        expensesButton.setTitleColor(UIColor.redColor(), forState: UIControlState())
+        expensesButton.layer.cornerRadius = 1.0
+        firstActionImage.layer.cornerRadius = 10.0
+        firstActionImage.clipsToBounds = true;
+        secondActionImage.layer.cornerRadius = 10.0
+        secondActionImage.clipsToBounds = true;
+        thirdActionImage.layer.cornerRadius = 10.0
+        thirdActionImage.clipsToBounds = true;
+        fourthActionImage.layer.cornerRadius = 10.0
+        fourthActionImage.clipsToBounds = true;
         tripNameHeader.text = TripName.name!
 //        println("trip show view load")
 //        println("should reflect trip show name++++++++++++++++")

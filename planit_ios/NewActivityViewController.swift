@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 class NewActivityViewController: UIViewController, UITextFieldDelegate {
     
@@ -15,9 +16,12 @@ class NewActivityViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var txtLocation: UITextField!
     @IBOutlet var txtStartTime: UITextField!
     @IBOutlet var txtEndTime: UITextField!
+    @IBOutlet var firstActionImage: UIImageView
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        firstActionImage.layer.cornerRadius = 10.0
+        firstActionImage.clipsToBounds = true;
         // Do any additional setup after loading the view.
     }
     
